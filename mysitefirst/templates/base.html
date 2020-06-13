@@ -16,7 +16,7 @@
         <div class="container nav-wrapper">
             <a href="/" class="brand-logo">Codedaddies List</a>
             <ul id="nav-mobile" class="right">
-                <li><a href="/">Home</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
             </ul>
         </div>
     </nav>
@@ -52,8 +52,6 @@
             </div>
         </div>
     </div>
-
-    
     <form action = "{% url 'my_search' %}" method = "post">
         {% csrf_token %}
         <input type = "text" name = "search" placeholder = "search" >
